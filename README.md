@@ -1,0 +1,2 @@
+# YunzaiBot_OneKeyInstall
+一键安装YunzaiBot以及原神常用插件
