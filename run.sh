@@ -100,6 +100,13 @@ while true; do
         echo "Git 从gitee克隆xiaoyao插件时遇到问题"
         exit 10
         fi
+        # 安装miao plus依赖
+        pnpm add image-size -w
+        if [ $? != 0 ]; then
+        echo "pnpm 安装 image-size 时遇到问题"
+        exit 17
+        fi
+
         break
     ;;
     n|N)
@@ -207,10 +214,8 @@ read endscript
 case "$endscript" in 
 y|Y)
     node app
-    break
 ;;
 *)
-    break
 ;;
 esac
 exit 0
